@@ -38,7 +38,6 @@
 
 i_number_elements = int(input("Введите количество элементов: "))
 l_elements = list()
-while i_number_elements:
-    l_elements.append(int(input(f"Введите {len(l_elements)+1} элемент: ")))
-    i_number_elements -= 1
-print(l_elements)
+for i in range(i_number_elements):
+    l_elements.append(int(input(f"Введите {i+1} элемент: ")))
+print(sorted(l_elements))
