@@ -9,6 +9,5 @@ import re
 #
 
 s_input = input("Введите элементы списка через разделитель [,:/]: ")
-l_numbers = map(int, re.split(",|:|/", s_input))
-l_unique_numbers = list(set(l_numbers))
-print(l_unique_numbers)
+l_numbers = list(map(int, re.split(",|:|/", s_input)))
+print([x for x in l_numbers if l_numbers.count(x) == 1])

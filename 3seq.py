@@ -1,4 +1,5 @@
 import re
+import multiset
 #
 #  Модуль 3 из домашнего задания для 4 вебинара.
 #
@@ -10,4 +11,4 @@ s_input = input("Введите элементы для первого спис�
 l_numbers1 = map(int, re.split(",|:|/", s_input))
 s_input = input("Введите элементы для второго списка через разделитель [,:/]: ")
 l_numbers2 = map(int, re.split(",|:|/", s_input))
-print(list(set(l_numbers1)-set(l_numbers2)))
+print(list(multiset.Multiset(l_numbers1)-multiset.Multiset(l_numbers2)))
